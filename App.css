@@ -1,0 +1,68 @@
+body {
+  font-family: 'Unica One';
+}
+
+.timer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+          -webkit-box-pack: center;
+          -ms-flex-pack: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.button {
+  border-radius: 10px;
+  color: red;
+  display: block;
+  font-size: 40px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.result {
+  margin-left: 15px;
+  margin-top: 25px;
+}
+
+.stopwatch {
+  font-size: 68px;
+  margin: 9px 30px;
+  text-align: center;
+}
+
+.lapTimes {
+  font-size: 48px;
+  text-align: center;
+}
+
+.results {
+  border-bottom: 2px solid red;
+  border-top: 2px solid red;
+  font-size: 24px;
+  height: 50vh;
+  margin: 0 auto;
+  overflow: scroll;
+  padding-left: 0;
+  text-align: center;
+  width: 200px;
+}
+
+.results li {
+  list-style-type: none;
+  margin: 10px;
+}
+
+.results p {
+  color: red;
+  display: inline;
+  margin: 10px;
+}
+
+.clear {
+  font-size: 30px;
+  margin: 0 auto;
+  text-align: center;
+  width: 80px;
+}

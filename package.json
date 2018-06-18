@@ -1,0 +1,61 @@
+{
+  "name": "Stoper2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "",
+  "scripts": {
+    "start": "webpack-dev-server --inline --hot --config ./webpack.config.js",
+    "test": "npm run test:html && npm run test:js",
+    "test:html": "nu-html-checker src/*.html",
+    "test:js": "./node_modules/.bin/eslint src/",
+    "init-project": "npm run init:gitignore && npm run init:npm-install",
+    "init:gitignore": "curl https://raw.githubusercontent.com/github/gitignore/master/Node.gitignore -o .gitignore",
+    "init:npm-install": "npm install",
+    "build": "npm run build:clean:script && NODE_ENV=production && npm run test && webpack",
+    "build:clean:script": "rimraf script-compiled.js",
+    "deploy": "gh-pages -d build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CiesielskiK/Stoper2.git"
+  },
+  "author": "kciesielski",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CiesielskiK/Stoper2/issues"
+  },
+  "homepage": "https://github.com/CiesielskiK/Stoper2#readme",
+  "dependencies": {
+    "npm": "^5.7.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.2.2",
+    "babel-loader": "^7.1.4",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "css-loader": "^0.28.10",
+    "eslint": "^4.18.2",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-import": "^2.9.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.7.0",
+    "eslint-plugin-react": "^7.7.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "gh-pages": "^1.1.0",
+    "html-webpack-plugin": "^3.0.6",
+    "nu-html-checker": "^0.1.0",
+    "optimize-js-plugin": "0.0.4",
+    "prop-types": "^15.6.1",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-hot-loader": "^3.0.0-beta.6",
+    "rimraf": "^2.6.2",
+    "style-loader": "^0.20.3",
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.11.2"
+  },
+  "homepage": "https://github.com/CiesielskiK/Stoper2"
+}
